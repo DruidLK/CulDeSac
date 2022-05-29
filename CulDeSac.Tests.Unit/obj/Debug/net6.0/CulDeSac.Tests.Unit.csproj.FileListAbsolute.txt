@@ -125,3 +125,4 @@ C:\Users\USER\source\repos\CulDeSac\CulDeSac.Tests.Unit\obj\Debug\net6.0\refint\
 C:\Users\USER\source\repos\CulDeSac\CulDeSac.Tests.Unit\obj\Debug\net6.0\CulDeSac.Tests.Unit.pdb
 C:\Users\USER\source\repos\CulDeSac\CulDeSac.Tests.Unit\obj\Debug\net6.0\CulDeSac.Tests.Unit.genruntimeconfig.cache
 C:\Users\USER\source\repos\CulDeSac\CulDeSac.Tests.Unit\obj\Debug\net6.0\ref\CulDeSac.Tests.Unit.dll
+C:\Users\USER\source\repos\CulDeSac\CulDeSac.Tests.Unit\bin\Debug\net6.0\KellermanSoftware.Compare-NET-Objects.dll

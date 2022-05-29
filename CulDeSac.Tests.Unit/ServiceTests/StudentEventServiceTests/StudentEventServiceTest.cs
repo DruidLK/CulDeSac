@@ -1,7 +1,9 @@
-﻿using System.Text;
+﻿using System.Linq.Expressions;
+using System.Text;
 using CulDeSac.Brokers.Queues;
 using CulDeSac.Models;
 using CulDeSac.Services.StudentEvents;
+using KellermanSoftware.CompareNetObjects;
 using Microsoft.Azure.ServiceBus;
 using Moq;
 using Newtonsoft.Json;
@@ -13,10 +15,12 @@ namespace CulDeSac.Tests.Unit.ServiceTests.StudentEventServiceTests
     {
         private readonly Mock<IQueueBroker> queueBrokerMock;
         private readonly IStudentEventService studentEventService;
+        private readonly ICompareLogic compareLogic;
 
         public StudentEventServiceTest()
         {
             this.queueBrokerMock = new Mock<IQueueBroker>();
+            this.compareLogic = new CompareLogic();
 
             this.studentEventService = new StudentEventService(
                 queueBroker: this.queueBrokerMock.Object);
@@ -41,5 +45,13 @@ namespace CulDeSac.Tests.Unit.ServiceTests.StudentEventServiceTests
 
         private static Filler<Student> CreateRandomFiller() =>
             new Filler<Student>();
+
+        private Expression<Func<Student, bool>> SameStudentAs(Student expectedStudent)
+        {
+            return actualStudent =>
+                this.compareLogic
+                    .Compare(expectedStudent, actualStudent)
+                        .AreEqual;
+        }
     }
 }

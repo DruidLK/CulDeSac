@@ -29,9 +29,9 @@ namespace CulDeSac.Tests.Unit.ServiceTests.StudentEventServiceTests
                 studentEventHandler: studentEventHandlerMock.Object);
 
             // then - assert
-
             studentEventHandlerMock.Verify(handler =>
-                handler.Invoke(incomingStudent),
+                handler.Invoke(
+                    It.Is(SameStudentAs(incomingStudent))),
                       Times.Once);
 
             this.queueBrokerMock.Verify(broker =>

@@ -47,6 +47,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "CompareNETObjects": {
+              "target": "Package",
+              "version": "[4.77.0, )"
+            },
             "FluentAssertions": {
               "target": "Package",
               "version": "[6.7.0, )"
