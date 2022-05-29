@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CulDeSac", "CulDeSac\CulDeSac.csproj", "{59F2E2DF-EB36-45C9-982F-01E2A6CA16E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CulDeSac.Tests.Unit", "CulDeSac.Tests.Unit\CulDeSac.Tests.Unit.csproj", "{405D83EB-A848-45DF-9689-E63B7CF391F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59F2E2DF-EB36-45C9-982F-01E2A6CA16E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59F2E2DF-EB36-45C9-982F-01E2A6CA16E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59F2E2DF-EB36-45C9-982F-01E2A6CA16E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59F2E2DF-EB36-45C9-982F-01E2A6CA16E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{405D83EB-A848-45DF-9689-E63B7CF391F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{405D83EB-A848-45DF-9689-E63B7CF391F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{405D83EB-A848-45DF-9689-E63B7CF391F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{405D83EB-A848-45DF-9689-E63B7CF391F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {23F02C06-8826-4110-BDDF-AA5F16118C9E}
+	EndGlobalSection
+EndGlobal

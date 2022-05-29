@@ -1,3 +1,5 @@
+using CulDeSac.Brokers.Queues;
+using CulDeSac.Services.StudentEvents;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -18,6 +20,8 @@ namespace CulDeSac
         {
 
             services.AddControllers();
+            services.AddTransient<IStudentEventService, StudentEventService>();
+            services.AddTransient<IQueueBroker, QueueBroker>();
 
             services.AddSwaggerGen(c =>
             {
