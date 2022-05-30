@@ -1,6 +1,6 @@
 ﻿namespace CulDeSac.Services.StudentServices
 {
-    public sealed class StudentService : IStudentService
+    public interface IStudentService
     {
     }
 }

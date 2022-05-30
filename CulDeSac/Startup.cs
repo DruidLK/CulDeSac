@@ -1,4 +1,5 @@
 using CulDeSac.Brokers.Queues;
+using CulDeSac.Services.OrchestrationServices.StudentEvents;
 using CulDeSac.Services.StudentEvents;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -38,16 +39,15 @@ namespace CulDeSac
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CulDeSac v1"));
             }
 
+            app.ApplicationServices.GetService<IStudentEventOrchestrationService>()
+                .ListenToStudentEvents();
+            
+            
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+                endpoints.MapControllers());
         }
     }
 }
